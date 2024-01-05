@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './page.module.css';
 import Image from "next/image";
+
 const BlogId = ({params}) => {
     return (
         <div className={style.container}>
