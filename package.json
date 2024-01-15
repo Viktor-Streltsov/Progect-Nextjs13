@@ -1,5 +1,5 @@
 {
-  "name": "progect_nextjs13",
+  "name": "nextfs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,17 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "mongoose": "^8.0.3",
-    "next": "14.0.3",
-    "react": "^18",
-    "react-dom": "^18",
-    "swr": "^2.2.4"
+    "bcryptjs": "^2.4.3",
+    "eslint": "8.41.0",
+    "eslint-config-next": "^13.4.4",
+    "mongoose": "6.11.1",
+    "next": "^13.4.4",
+    "next-auth": "^4.22.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "swr": "^2.1.5"
   },
   "devDependencies": {
-    "@types/node": "20.10.2",
-    "@types/react": "18.2.41",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.3"
+    "@types/react": "18.2.47"
   }
 }
