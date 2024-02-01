@@ -3,6 +3,7 @@ import './globals.css';
 import NavBar from "../app/components/navBar/NavBar";
 import Footer from "../app/components/footer/Footer";
 import {ThemeProvider} from "../context/ThemeContext";
+import AuthProvider from "../app/components/AuthProvider/AuthProvider";
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,11 +18,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
             <ThemeProvider>
-                <div className='container'>
-                    <header><NavBar/></header>
-                    {children}
-                    <footer><Footer/></footer>
-                </div>
+                <AuthProvider>
+                    <div className='container'>
+                        <header><NavBar/></header>
+                        {children}
+                        <footer><Footer/></footer>
+                    </div>
+                </AuthProvider>
             </ThemeProvider>
       </body>
     </html>

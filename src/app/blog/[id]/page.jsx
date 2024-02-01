@@ -1,6 +1,6 @@
 import React from 'react';
-import style from './page.module.css';
 import Image from "next/image";
+import style from './page.module.css';
 
 const getData = async (id) => {
     const res = await fetch(`http://localhost:3000/api/posts/${id}`, {cache: 'no-cache'});
@@ -8,8 +8,15 @@ const getData = async (id) => {
     if(!res.ok) {
         throw new Error('Filed to fetch data');
     }
-
     return res.json();
+}
+
+export async function generateMetadata({ params }) {
+    const post = await getData(params.id);
+    return {
+        title: post.title,
+        description: post.description,
+    }
 }
 
 const BlogId = async ({params}) => {
